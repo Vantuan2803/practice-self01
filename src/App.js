@@ -1,23 +1,23 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+
+// Tạo một functional component tên là PersonalInfo
+function PersonalInfo(props) {
+  return (
+    <div>
+      <h2>Thông tin cá nhân</h2>
+      <p>Họ và tên: {props.fullName}</p>
+      <p>Tuổi: {props.age}</p>
+    </div>
+  );
+}
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Ứng dụng ReactJS đầu tiên</h1>
+      <img src="" alt="Ảnh" /> 
+      <PersonalInfo fullName="Nguyễn Văn A" age={30} /> 
     </div>
   );
 }
